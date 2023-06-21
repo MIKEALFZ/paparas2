@@ -71,15 +71,15 @@ class Zoo {
 
     //Διαγραφή ζώου
     public void deleteAnimal(int code) {
-        Iterator<Animal> iterator = animals.iterator();
-        while (iterator.hasNext()) {
-            Animal animal = iterator.next();
-            if (animal.getCode() == code) {
-                iterator.remove();
+          Animal animal = findAnimalByCode(code);
+            if (animal != null) {
+                animals.remove(animal);
                 saveAnimals();
+                System.out.println("Animal removed successfully.");
                 return;
             }
-        }
+            else System.out.println("Animal not found.");
+            return;
     }
 
     // Προσομοίωση ταΐσματος

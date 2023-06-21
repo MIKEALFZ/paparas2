@@ -86,7 +86,6 @@ public class Main {
                     System.out.print("Enter animal code: ");
                     int removeCode = scanner.nextInt();
                     zoo.deleteAnimal(removeCode);
-                    System.out.println("Animal removed successfully.");
                 }
                 case 6 -> {
                     System.out.println();
